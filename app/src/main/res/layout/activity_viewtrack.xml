@@ -1,0 +1,19 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VIEW ALL BUS"
+        android:layout_margin="30dp"
+        android:onClick="viewbusclickevent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TRACK BUS"
+        android:layout_margin="30dp"
+        android:onClick="trackbusclickevent"/>
+</LinearLayout>

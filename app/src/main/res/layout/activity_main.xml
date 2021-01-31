@@ -1,0 +1,23 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DRIVERS"
+        android:onClick="myclickevent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="30dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USERS"
+        android:onClick="userclickevent"/>
+
+</LinearLayout>
