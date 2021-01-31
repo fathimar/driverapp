@@ -20,9 +20,10 @@ public class SearchbusActivity extends AppCompatActivity {
     }
 
     public void searchbusclickevent(View view) {
+        
         String getbus=bname.getText().toString();
+Toast.makeText(this,getbus,Toast.LENGTH_LONG).show();
 
-        Toast.makeText(this,"getbus",Toast.LENGTH_LONG).show();
 
     }
 }
