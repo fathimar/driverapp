@@ -24,8 +24,8 @@ EditText username,password;
         String getpass=password.getText().toString();
         Toast.makeText(this,getpass+getuser,Toast.LENGTH_LONG).show();
 
-        Intent i=new Intent(this,ViewtrackActivity.class);
-        startActivity(i);
+//        Intent i=new Intent(this,ViewtrackActivity.class);
+//        startActivity(i);
     }
 
     public void mainuser(View view) {
