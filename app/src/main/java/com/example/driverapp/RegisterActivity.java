@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,7 +23,7 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity {
     EditText uname,phoneno,uemail,username,password;
 
-    String apiurl="http://192.168.43.118/bustracking/api/userreg_api.php";
+    String apiurl="http://192.168.1.20/project/bustracking/api/userreg_api.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,6 @@ public class RegisterActivity extends AppCompatActivity {
         username=(EditText)findViewById(R.id.user);
         password=(EditText)findViewById(R.id.pass);
 
-        sendtoServer();
 
     }
 
@@ -45,6 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String s) {
 
+                        Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
 
 
                     }
@@ -52,6 +53,11 @@ public class RegisterActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
+
+                        Log.d("error=> ",volleyError.toString());
+
+                        Toast.makeText(getApplicationContext(),volleyError.toString(),Toast.LENGTH_LONG).show();
+
 
                     }
                 })
@@ -79,12 +85,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void regclickevent(View view) {
-        String getname=uname.getText().toString();
-        String getphoneno=phoneno.getText().toString();
-        String getemail=uemail.getText().toString();
-        String getuser=username.getText().toString();
-        String getpass=password.getText().toString();
-        Toast.makeText(this,getname+getphoneno+getemail+getpass+getuser,Toast.LENGTH_LONG).show();
+
+       // Toast.makeText(this,getname+getphoneno+getemail+getpass+getuser,Toast.LENGTH_LONG).show();
+        sendtoServer();
 
     }
 
